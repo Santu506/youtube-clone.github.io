@@ -150,14 +150,47 @@ hr{
     font-size: 0.6rem;
 }
 
-@media (max-width:798px){
+ @media (max-width:798px){
+    /* .side-bar{
+        display: none;
+    }*/
+    main{
+        display:block;
+    }
     .side-bar{
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        margin: 0%;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        overflow:hidden;
+        width: 100%;
+        
+        overflow-x:none;
+    
+    }
+    .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        padding: 0px;
+        margin: 0%;
+    }
+    .nav span{
         display: none;
     }
+    .nav-link{
+        padding: 4px;
+    }
+
     .ext{
         display: none;
-    }
-}
+    } 
+} 
 @media(max-width:996px){
     .video{
         width: 31.7%;
@@ -179,7 +212,8 @@ hr{
         align-items: center;
     }
     .nav-link span{
-        margin: 0;
+        margin-left:10px ;
+        
     }
     .search input{
         width: 17rem;
@@ -205,5 +239,82 @@ hr{
     }
     .video{
         width: 100%;
+    }
+
+    
+}
+
+
+/* shorts*/
+.short{
+    padding: 10px;
+    border-top: 3px solid gray;
+    
+}
+.head-short{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+.short-img{
+    height: 25px;
+    width: 15px;
+}
+
+.main-short{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    
+    gap: 10px;
+    flex-wrap: nowrap;
+    height:auto;
+}
+.thumbnail-short{
+    width: 23.3%;
+    height: 500px;
+    background-color: black;
+    border-radius: 15px;
+    
+    
+}
+.thumbnail-short img{
+            width: 100%;
+            height: 80%;
+            border-radius: 15px;
+           
+           
+}
+.thumbnail-short .title-short,span  {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: white;
+    padding-left: 10px;
+}
+@media (max-width:798px){
+    .main-short{
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+        flex-wrap: wrap;
+        border: none;
+
+    }
+
+    .thumbnail-short{
+        width: 45%;
+        height:auto;
+        
+        
+    }
+    .thumbnail-short img{
+        width: 100%;
+        height: 80%;
+    }
+    .title-short{
+        overflow-x: hidden;
     }
 }
